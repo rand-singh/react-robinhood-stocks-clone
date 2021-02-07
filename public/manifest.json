@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Robin Hood Clone",
+  "name": "Robin Hood Clone built using React",
   "icons": [
     {
       "src": "favicon.ico",
