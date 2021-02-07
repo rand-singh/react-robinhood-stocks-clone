@@ -1,12 +1,17 @@
 import './styles/styles.scss';
 import Header from './components/Header'
-import Body from './components/Body'
+import Feed from './components/Feed'
+import Stocks from './components/Stocks'
 
 function App() {
   return (
     <div className="app">
       <Header />
-      <Body />
+
+      <div className="app__container">
+        <Feed />
+        <Stocks />
+      </div>
     </div>
   );
 }

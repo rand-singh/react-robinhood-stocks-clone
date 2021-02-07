@@ -14,7 +14,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 	line-height: 1.4;
+	letter-spacing: 1.3px;
 	background-color: $black;
+	color: $white;
+	font-family: "Montserrat", sans-serif;
 }
 
 code {
@@ -26,4 +29,10 @@ code {
 *:before,
 *:after {
 	box-sizing: inherit;
+}
+
+h1,
+h2,
+p {
+	margin: 0;
 }
