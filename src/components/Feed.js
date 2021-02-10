@@ -1,5 +1,6 @@
 import React from 'react'
 import LineGraph from './LineGraph'
+import TimeLine from './TimeLine'
 
 function Feed() {
     return (
@@ -11,6 +12,7 @@ function Feed() {
                 </div>
                 <div className="feed__chart">
                     <LineGraph />
+                    <TimeLine />
                 </div>
             </div>
         </div>
