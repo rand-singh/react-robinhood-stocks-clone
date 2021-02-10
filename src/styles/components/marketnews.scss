@@ -1,15 +1,31 @@
 .marketnews__container {
 	padding: 20px;
-	margin-top: 15px;
+	margin: 15px auto;
 	border: 1px solid #31363a;
 	border-radius: 5px;
+	max-width: 1030px;
 }
 
 .article__container {
-	border-bottom: 1px solid #31363a;
 	padding-bottom: 20px;
+	text-align: left;
+	margin: 0 50px;
+	padding-top: 20px;
+
+	h4 {
+		margin-bottom: 10px;
+	}
+
+	p {
+		font-size: 14px;
+	}
 
 	a {
 		color: white;
+	}
+
+	img {
+		height: 100px;
+		object-fit: contain;
 	}
 }
