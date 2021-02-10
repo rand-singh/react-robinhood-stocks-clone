@@ -15,6 +15,10 @@ function Feed() {
                     <TimeLine />
                 </div>
             </div>
+            <div className="feed__buying__section">
+                <h2>Buying Power</h2>
+                <h2>$427.11</h2>
+            </div>
         </div>
     )
 }
