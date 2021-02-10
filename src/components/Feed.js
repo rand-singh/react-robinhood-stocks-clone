@@ -1,6 +1,7 @@
 import React from 'react'
 import LineGraph from './LineGraph'
 import TimeLine from './TimeLine'
+import MarketNews from './MarketNews'
 
 function Feed() {
     return (
@@ -19,6 +20,7 @@ function Feed() {
                 <h2>Buying Power</h2>
                 <h2>$427.11</h2>
             </div>
+            <MarketNews />
         </div>
     )
 }

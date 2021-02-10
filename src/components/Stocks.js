@@ -28,7 +28,6 @@ function Stocks() {
             })
 
             Promise.all(promises).then(() => {
-                console.log(tempData)
                 setMyStocks(tempData)
             })
         })
@@ -66,6 +65,8 @@ function Stocks() {
         })
     }, [])
 
+    console.log(myStocks);
+
     return (
         <div className="stocks">
             <div className="stocks__header">
@@ -73,13 +74,14 @@ function Stocks() {
             </div>
             <div className="stocks__list">
                 {myStocks.map((stock) => (
-                    <StocksRow
-                        key={stock.data.ticker}
-                        name={stock.data.ticker}
-                        openPrice={stock.info.o}
-                        shares={stock.data.shares}
-                        price={stock.info.c}
-                    />
+                    <h4 key={stock.data.ticker}>{stock.data.ticker}</h4>
+                    // <StocksRow
+                    //     key={stock.data.ticker}
+                    //     name={stock.data.ticker}
+                    //     openPrice={stock.info.o}
+                    //     shares={stock.data.shares}
+                    //     price={stock.info.c}
+                    // />
                 ))}
             </div>
 

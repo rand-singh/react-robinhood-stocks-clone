@@ -56,7 +56,7 @@ function LineGraph() {
                         xAxes: [{
                             type: "time",
                             time: {
-                                format: "MM/DD/YY",
+                                parser: "MM/DD/YY",
                                 tooltipFormat: 'll',
                             },
                             ticks: {
