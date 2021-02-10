@@ -65,8 +65,6 @@ function Stocks() {
         })
     }, [])
 
-    console.log(myStocks);
-
     return (
         <div className="stocks">
             <div className="stocks__header">
@@ -74,14 +72,13 @@ function Stocks() {
             </div>
             <div className="stocks__list">
                 {myStocks.map((stock) => (
-                    <h4 key={stock.data.ticker}>{stock.data.ticker}</h4>
-                    // <StocksRow
-                    //     key={stock.data.ticker}
-                    //     name={stock.data.ticker}
-                    //     openPrice={stock.info.o}
-                    //     shares={stock.data.shares}
-                    //     price={stock.info.c}
-                    // />
+                    <StocksRow
+                        key={stock.data.ticker}
+                        name={stock.data.ticker}
+                        openPrice={stock.info.o}
+                        shares={stock.data.shares}
+                        price={stock.info.c}
+                    />
                 ))}
             </div>
 
