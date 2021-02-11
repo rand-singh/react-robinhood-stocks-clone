@@ -65,35 +65,52 @@ function Stocks() {
         })
     }, [])
 
+    useEffect(() => {
+        let portfolioValue = 0;
+        
+        myStocks.forEach((stock) => {
+            portfolioValue += (stock.data.shares * stock.info.c)
+        })
+
+        console.log(portfolioValue.toFixed(2))
+        
+        return () => {
+            // cleanup
+        }
+    }, [myStocks])
+
+
     return (
         <div className="stocks">
-            <div className="stocks__header">
-                <p>Stocks</p>
-            </div>
-            <div className="stocks__list">
-                {myStocks.map((stock) => (
-                    <StocksRow
-                        key={stock.data.ticker}
-                        name={stock.data.ticker}
-                        openPrice={stock.info.o}
-                        shares={stock.data.shares}
-                        price={stock.info.c}
-                    />
-                ))}
-            </div>
+            <div className="stocks__container">
+                <div className="stocks__header">
+                    <p>Stocks</p>
+                </div>
+                <div className="stocks__list">
+                    {myStocks.map((stock) => (
+                        <StocksRow
+                            key={stock.data.ticker}
+                            name={stock.data.ticker}
+                            openPrice={stock.info.o}
+                            shares={stock.data.shares}
+                            price={stock.info.c}
+                        />
+                    ))}
+                </div>
 
-            <div className="stocks__header">
-                <p>Lists</p>
-            </div>
-            <div className="stocks__list">
-                {stockData.map((stock) => (
-                    <StocksRow
-                        key={stock.name}
-                        name={stock.name}
-                        openPrice={stock.o}
-                        price={stock.c}
-                    />
-                ))}
+                <div className="stocks__header">
+                    <p>Lists</p>
+                </div>
+                <div className="stocks__list">
+                    {stockData.map((stock) => (
+                        <StocksRow
+                            key={stock.name}
+                            name={stock.name}
+                            openPrice={stock.o}
+                            price={stock.c}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     )

@@ -1,8 +1,17 @@
 .stocks {
 	flex: 0.2;
+}
+
+.stocks__container {
 	border: 1px solid #42494d;
 	border-radius: 15px;
 	background-color: #1e2023;
+
+	.stocks__list:last-child {
+		.stock:last-child {
+			border-bottom: 0;
+		}
+	}
 }
 
 .stocks__header {
